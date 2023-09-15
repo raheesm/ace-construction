@@ -1,0 +1,232 @@
+.header{
+ &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1em;
+    @extend .container;
+    @extend .container--px;
+
+    .brand-logo{
+        padding: 1em;
+    }
+ }
+ &__info{
+    display: none;
+    @include breakpoint-up(large){
+        display: flex;
+        justify-content: end;
+        gap: 3em;
+    }
+
+    width: 100%;
+    padding-right: 5em;
+    .info-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 1em;
+        @include breakpoint-up(xlarge){
+            gap: 1.5em;
+        }
+        &__icon{
+            @extend .flex-center-column;
+            height: 100% ;
+          
+            svg{
+                width: 25px;
+                fill: $secondary;
+                
+            }
+
+        }
+        &__content{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            height: 3em;
+
+            
+            p{
+                margin: 0;
+                font-size: 0.75;
+                font-weight: 700;
+                line-height: 2em;
+            }
+            a{
+                font-size: 0.875rem;
+                font-weight: 700;
+                letter-spacing: 1;
+                color:$primary;
+            }
+        }
+    }
+ }
+ &__button{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+    width: fit-content;
+    background-color: $secondary;
+    padding-inline:1em;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    @include breakpoint-up(large){
+        font-size: 1rem;
+        padding: 0.5em 1.2em;
+    }
+    @include breakpoint-up(xxlarge){
+        font-size: 1rem;
+        padding: 0.5em 1.5em;
+    }
+    svg{
+        width: 2em; 
+    }
+    p{
+        font-size: 0.8rem;
+        @include breakpoint-up(large){
+        font-size: inherit;
+            
+        }
+    }
+    @include breakpoint-up(large){
+    
+        width: 13em;
+    }
+    @include breakpoint-up(xlarge){
+    
+        width: 13em;
+    }
+    @include breakpoint-up(xxlarge){
+    
+        width: 13em;
+    }
+ 
+ }
+ .mobile-menu{
+    width: 2em;
+    @include breakpoint-up(large){
+        display: none;
+    }
+    &__list{
+       display: none;
+       position: absolute;
+       left: 0;
+       top: 0;
+       background-color: $primary;
+       width: 100%;
+       height: 100vh;
+       align-items: center;
+       text-align: center;
+       justify-content: center;
+       z-index: 99;
+       ul{
+        list-style: none;
+        padding-left: 0;
+        li{
+            width: 100%;
+            margin-bottom: 1em;
+            a{
+                color: #ffffff;
+                font-weight: 500;
+                font-size: 1rem;
+            }
+            &:hover{
+                li{
+                    background-color: black;
+                }
+            }
+        }
+       }
+       #menuCloseBtn{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+       }
+    }
+ }
+ &__bottom{
+    padding: 2em 0;
+    background-color: $primary;
+    display: none;
+    @include breakpoint-up(large){
+        display: block;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        color: #ffffff;
+        @extend .container;
+        @include breakpoint-up(large){
+
+            gap:3em;
+        }
+
+        li{
+            padding-bottom: 0;
+            a{
+                margin: 0;
+                color: #ffffff;
+                font-weight: 400;
+                @include breakpoint-up(xlarge){
+                    font-weight: 500;
+                    font-size: $font-lg;
+                }
+                @include breakpoint-up(xxlarge){
+                    font-weight: 400;
+                    font-size: $font-lg;
+                }
+            }
+            .active{
+                @include breakpoint-up(xlarge){
+                    font-weight: 800;
+                }
+                @include breakpoint-up(xxlarge){
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+ }
+}
+
+.info-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1em;
+    &__icon{
+        @extend .flex-center-column;
+        height: 100% ;
+      
+        svg{
+            width: 25px;
+            fill: $secondary;
+            
+        }
+
+    }
+    &__content{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        height: 3em;
+        p{
+            margin: 0;
+            font-size: 0.8rem;
+        }
+        a{
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1;
+        }
+    }
+}

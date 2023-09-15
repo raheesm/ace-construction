@@ -1,0 +1,96 @@
+.about{
+    .img-div{
+        display: none;
+        @include breakpoint-up(large){
+            display: flex;
+        }
+    }
+ 
+    p{
+        line-height: 2em;
+     
+    }
+    @include breakpoint-up(large){
+        margin: 3em 0;
+    }
+    &__div{
+        @include breakpoint-up(large){
+            display: flex;
+            gap: 2em;
+            .content{
+                flex: 1;
+            }
+            .img-div{
+                flex: 1;
+                // padding: 2em;
+                position: relative;
+                img{
+                    max-width: 100%; 
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                &::before{ 
+                    position: absolute;
+                    content: '';
+                    top: 14%;
+                    left: -4%;
+                    width: 10em;
+                    height: 10em;
+                    background-color: $primary;
+                    z-index: -1;
+                }
+                &__info{
+                    position: absolute;
+                    bottom: 3%;
+                    right:0%;
+                    width: 10em;
+                    height: auto;
+                    background-color: $primary;
+                    color: #ffffff;
+                    padding: 1em;
+                    @include breakpoint-up(large){
+                        width: 15em;
+                    }
+                    p{
+                        line-height: 1.5em;
+                        font-size: 1rem;
+                    }
+                    svg{
+                        width: 4em;
+                        aspect-ratio: 1/1;
+                        margin-right: 0;
+                        float: right;
+
+                        @include breakpoint-up(large){
+
+                            width:3em;
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint-up(xlarge){
+            .img-div{
+                &::before{
+                    position: absolute;
+                    content: '';
+                    top: -2.5%;
+                    left: -2%;
+                    width: 10em;
+                    height: 10em;
+                    background-color: $primary;
+                    z-index: -1;
+                }
+                img{
+                    object-fit: cover;
+                }
+                &__info{
+                    
+                    bottom: -15%;
+                }
+            }
+        }
+    }
+
+}

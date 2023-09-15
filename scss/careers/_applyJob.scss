@@ -1,0 +1,62 @@
+.job-apply{
+    
+    &__div{
+        // position: relative;
+        @include breakpoint-up(large){
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+        @include breakpoint-up(xlarge){
+        
+            gap: 2em;
+
+        }
+
+        .job-card{
+            // position: relative;
+            flex: 1;
+            &__head{
+                @include breakpoint-up(large){
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                    margin-bottom: 1em;
+
+                    .btn{
+                        font-size: 0.9rem;
+                        padding: 0.5em 0.8em;
+                        height: fit-content;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            &__body{
+                @include breakpoint-up(large){
+                    
+                    
+                    .job-title{
+                        // flex: 2;
+                    }
+                    .job-desc{
+                        // flex: 6;
+                     
+                        font-size: 0.9rem;
+                        p{
+                            max-width: 70ch;
+                            margin: 0;
+                            line-height: 1.5em;
+                        }
+                    }
+                    .apply-btn{
+                        flex: 2;
+                        width: fit-content;
+                       
+                    }
+                }
+            }
+        }
+    }
+}

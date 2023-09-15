@@ -1,0 +1,172 @@
+.home-about {
+  &__div {
+    @include breakpoint-up(large){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    @include breakpoint-up(xlarge){
+     
+      gap: 0em;
+    }
+  }
+  &__content {
+    margin-bottom: 3em;
+    @include breakpoint-up(large){
+      flex: 1;
+    }
+    @include breakpoint-up(xlarge){
+      flex: 1;
+    }
+    @include breakpoint-up(xxlarge){
+      flex: 1.2;
+    }
+    h4{
+      @include breakpoint-up(large){
+        font-size: 1.375rem;
+        font-weight: 900;
+      }
+    }
+    h2{
+      @include breakpoint-up(large){
+        font-size: 2.5rem;
+        font-weight: 900;
+        max-width: 30ch;
+      }
+      @include breakpoint-up(xlarge){
+        font-size: 2.75rem;
+        font-weight: 900;
+        max-width: 25ch;
+      }
+      @include breakpoint-up(xxlarge){
+        font-size: 3rem;
+        font-weight: 900;
+        max-width: 25ch;
+      }
+    }
+    p {
+      line-height: 2em;
+      @include breakpoint-up(large){
+        max-width: 52ch;
+      }
+      @include breakpoint-up(xxlarge){
+        max-width: 75ch;
+      }
+    }
+
+  }
+  &__bullets{
+    
+   
+    ul {
+      color: $primary;
+      list-style: none;
+      padding-left: 0;
+
+      @include breakpoint-up(large){
+        display: flex;
+        height: 8em;
+        gap: 0.5em;
+        flex-flow: column wrap;
+      }
+
+      li {
+       display: flex;
+       align-content: center;
+       font-weight: 400;
+       margin-bottom: 1em;
+        &::before {
+          content: "";
+          background-image: url(../../assets/images/icons/check-mark-white.png);
+          background-size: 1em ;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-right: 1em;
+          background-color: $secondary;
+          border-radius: 50%;
+          border: 3px solid $secondary;
+          
+        }
+        &:hover::before{
+           background-color: $primary; 
+          border: 3px solid $primary;
+
+        }
+      }
+    }
+  }
+  &__feature-sec {
+    @include breakpoint-up(large){
+      flex: 1;
+    }
+    @include breakpoint-up(xlarge){
+      flex:1;
+    }
+
+    .counter {
+      display: flex;
+      // flex-wrap: wrap;
+      h2 {
+        color: $secondary;
+        @include breakpoint-up(large){
+         font-size: 2.5rem;
+        }
+      }
+      @include breakpoint-up(large){
+        margin-bottom: 3em;
+      }
+      @include breakpoint-up(xlarge){
+        gap:1em;
+       p{
+        max-width: 20ch;
+        font-weight: bold;
+        
+       }
+
+      }
+      
+    }
+  }
+  &__img {
+    position: relative;
+    .about-main-img {
+      object-fit: contain;
+      height: 18em;
+    }
+    .joinus-btn{
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+      align-items: center;
+      background-color: $primary;
+      width: 100%;
+      padding: 1em 2em;
+      color: #ffffff;
+      @include breakpoint-up(large){
+        width: fit-content;
+        padding: 2em;
+        display: block;
+        position: absolute;
+        top:50%;
+        left: 0;
+        font-size: $font-lg;
+        font-weight: 800;
+      }
+      @include breakpoint-up(xlarge){
+        font-size: 2rem;
+        padding: 1em;
+      }
+    
+      h3{
+        margin-bottom: 0;
+        padding: 0.5em 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}

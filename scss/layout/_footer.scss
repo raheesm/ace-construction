@@ -1,0 +1,181 @@
+.footer {
+  position: relative;
+
+  // @include breakpoint-up(large){
+  //   margin-top: 5em;
+  // }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    @include breakpoint-up(large) {
+      justify-content: flex-end;
+      gap: 3em;
+    }
+    .info-box {
+      padding: 1em;
+
+      @include breakpoint-down(small) {
+        &:last-child {
+          // background-color: rgb(236, 236, 236);
+          justify-self: center;
+          text-align: center;
+          padding-top: 0;
+          flex-direction: column;
+        }
+      }
+
+      &__content {
+        p {
+          font-weight: bold;
+          font-size: 1rem;
+        }
+        a {
+          color: $primary;
+        }
+      }
+    }
+  }
+  &__bottom {
+    background-color: $primary;
+
+    @include breakpoint-up(xlarge){
+      padding: 2em 0;
+    }
+    .footer__box {
+      color: #ffffff;
+    
+      ul {
+        list-style: none;
+        padding-left: 0;
+        gap: 1em;
+      }
+      p {
+        line-height: 2em;
+        @include breakpoint-up(large) {
+          max-width: 30ch;
+        }
+      }
+      a {
+        color: #ffffff;
+        @include breakpoint-up(large){
+          font-weight: 500;
+          font-size: $font-med;
+        }
+      }
+      &__wrapper{
+        @include breakpoint-up(large) {
+          display: flex;
+        }
+        .footer__links{
+          @include breakpoint-up(large) {
+            width: 12em;
+            padding-left: 1em;
+          }
+          @include breakpoint-up(xxlarge) {
+            width: 15em;
+          }
+        }
+      }
+      @include breakpoint-up(large) {
+        &:first-child {
+          flex: 1.5;
+          position: relative;
+        }
+        &:nth-child(2) {
+          flex: 1.5;
+        }
+        &:last-child {
+          flex: 2;
+        }
+      }
+      @include breakpoint-up(xxlarge) {
+        &:first-child {
+          flex: 1.5;
+        }
+        &:nth-child(2) {
+          flex: 1.5;
+        }
+        &:last-child {
+          flex: 2;
+        }
+      }
+    }
+    .container {
+      @include breakpoint-up(large) {
+        display: flex;
+        justify-content: end;
+       
+      }
+    }
+  }
+  &__logo {
+    margin: 0 auto;
+    width: 50%;
+    @extend .flex-center-column;
+
+    @include breakpoint-up(large) {
+      width: 12.25em;
+      height: 12.25em;
+    }
+    @include breakpoint-up(xlarge) {
+      width: 15.25em;
+      height: 15.25em;
+      object-fit: contain;
+    }
+  }
+  &__form {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #ffffff;
+    padding: 1.5em 1em;
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    top: -25%;
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+    @include breakpoint-up(large) {
+      top: -30%;
+      left: 15%;
+      width: 87%;
+      padding: 2em 1.5em;
+    }
+    @include breakpoint-up(xlarge) {
+      top: -35%;
+      left: 10%;
+      width: 95%;
+    }
+    @include breakpoint-up(xxlarge) {
+      top: -35%;
+      left: 15%;
+      width: 85%;
+    }
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  textarea {
+    border: 1px solid whitesmoke;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+
+    @include breakpoint-up(xlarge){
+      padding: 1em;
+      margin-bottom: 1.5em;
+    }
+    @include breakpoint-up(xxlarge){
+      padding: 1em;
+      margin-bottom: 1.5em;
+    }
+  }
+}

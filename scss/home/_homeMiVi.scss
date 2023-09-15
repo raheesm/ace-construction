@@ -1,0 +1,82 @@
+.mivi {
+  margin-top: 2em;
+  &__div {
+    @include breakpoint-up(large) {
+      padding-top: 3em;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+    }
+  }
+  &__img-div {
+    position: relative;
+    @include breakpoint-up(large) {
+      flex: 1;
+    }
+   img{
+    @include breakpoint-up(xlarge) {
+      width: 100%;
+      height: 70vh;
+    }
+    @include breakpoint-up(xxlarge) {
+      height: 60vh;
+    }
+   }
+  }
+  &__imgbox {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $primary;
+    color: #ffffff;
+    padding: 1em;
+    width: fit-content;
+   
+
+    h1{
+      @include breakpoint-up(large){
+        font-size:4rem;
+        font-weight: 800;
+        margin-bottom: 0;
+      }
+    }
+    p {
+      max-width: 9ch;
+      @include breakpoint-up(large){
+        font-size:1.2rem;
+        font-weight: 500;
+   
+      }
+      @include breakpoint-up(xlarge){
+        font-size:1.5rem;
+        font-weight: 600;
+       
+      }
+    }
+  }
+  &__content {
+    padding-inline: 1em;
+    padding-top: 2em;
+    @include breakpoint-up(large) {
+      flex: 1;
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between;
+      height: 70vh;
+      padding-top: 1em;
+      h2{
+        font-size: 2.5rem;
+      }
+    }
+    @include breakpoint-up(xlarge) { 
+      height: 60vh; 
+      
+    }
+    p {
+      @include breakpoint-up(large) {
+        max-width: 50ch;
+        line-height: 2em;
+      }
+    }
+  }
+}

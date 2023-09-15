@@ -1,0 +1,57 @@
+.services-grid {
+  h2 {
+    margin-top: 0;
+  }
+  @include breakpoint-up(medium) {
+    margin: 2em 0;
+    padding-inline: 2em;
+  }
+
+  .card {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    transition: $pm-transition;
+    &__head {
+      img {
+        width: 100%;
+        aspect-ratio: 2/1;
+        object-fit: cover;
+      }
+    }
+    &__body {
+      padding: 1em;
+      text-align: center;
+      @include breakpoint-up(large){
+        padding: 1.65em;
+      }
+      @include breakpoint-up(xlarge){
+        padding: 2em;
+      }
+
+      h4 {
+        @include breakpoint-up(large){
+          margin-bottom: 0;
+          font-size: $font-lg;
+        }
+      }
+      p {
+        line-height: 2em;
+        font-size: 0.9rem;
+        @include breakpoint-up(large){
+          font-size: inherit;
+          font-weight: normal;
+          line-height: 1.75em;
+        }
+        @include breakpoint-up(large){
+       
+        }
+      }
+    }
+    &:hover {
+      transform: translateY(-5px);
+      img {
+        filter: brightness(0.9);
+      }
+    }
+  }
+}

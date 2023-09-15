@@ -1,0 +1,46 @@
+.pm-list{
+  @include breakpoint-up(large){
+    margin-top: 2em;
+  }
+    ul {
+      color: $primary;
+      list-style: none;
+      padding-left: 0;
+
+      @include breakpoint-up(large){
+        display: flex;
+        height: 9em;
+        gap: 0.5em;
+        flex-flow: column wrap;
+        width: 28em;
+      }
+
+      li {
+       display: flex;
+       align-content: center;
+       font-weight: 600;
+       margin-bottom: 1em;
+       font-size: 1.375;
+        &::before {
+          content: "";
+          background-image: url(../../assets/images/icons/check-mark-white.png);
+          background-size: 1em ;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-right: 1em;
+          background-color: $secondary;
+          border-radius: 50%;
+          border: 3px solid $secondary;
+          
+        }
+        &:hover::before{
+           background-color: $primary; 
+          border: 3px solid $primary;
+
+        }
+      }
+    }
+  }

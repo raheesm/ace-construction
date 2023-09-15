@@ -1,0 +1,95 @@
+.quality {
+  &__div {
+    // background-image: url(../images/contact-form-banner.jpg);
+    background-image: url("../../assets/images/contact-form-banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 1em;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5em;
+
+    @include breakpoint-up(large) {
+      height: 28em;
+      grid-auto-rows: 14em;
+      align-content: center;
+      padding-inline: 3em;
+      gap: 2em;
+    }
+    @include breakpoint-up(xlarge) {
+      height: 33em;
+      padding-inline: 8em;
+      gap: 3em;
+    }
+    @include breakpoint-up(xxlarge) {
+      height: 30em;
+      padding-inline: 10em;
+      gap: 5em;
+    }
+
+    .card {
+      background-color: $primary;
+      padding: 1em;
+      transition: $pm-transition;
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      @include breakpoint-up(large) {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1em;
+        height: 100%;
+        min-height: 19em;
+        padding: 1.5em;
+      }
+      @include breakpoint-up(xlarge) {
+        height: 100%;
+        gap: 1em;
+        min-height: 19em;
+      }
+      &__head {
+        margin: 0 auto;
+
+        img {
+          filter: brightness(0) invert(1);
+          width: 5em;
+          @include breakpoint-up(large) {
+            margin: 0 auto;
+            width: 4.438em;
+          }
+        }
+        @include breakpoint-up(large) {
+          width: 5em;
+          margin: 0 auto;
+          margin-top: 1em;
+        }
+      }
+      &__body {
+        p {
+          font-size: 0.8rem;
+          text-align: left;
+          @include breakpoint-up(large) {
+            margin-top: 0;
+            font-size: $font-med;
+            font-weight: 400;
+            font-weight: normal;
+        
+          }
+        }
+        h4 {
+          text-align: left;
+          @include breakpoint-up(large) {
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}

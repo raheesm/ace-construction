@@ -1,0 +1,56 @@
+.home-clients {
+  margin-bottom: 1em;
+
+  @include breakpoint-up(large){
+    margin-top: 7em;
+    margin-bottom: 5em;
+  }
+  &__div {
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      -o-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+
+      display: flex;
+      align-items: center;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      padding: 1em;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+
+      img {
+        filter: grayscale(100%);
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        opacity: 0.5;
+
+        @include breakpoint-up(large){
+          padding:3em 2em;
+        }
+      }
+    }
+
+    
+  }
+}

@@ -1,0 +1,160 @@
+.contact-desc {
+  margin-bottom: 3em;
+  .contact-info {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2em;
+    }
+    @include breakpoint-up(xxlarge) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10em;
+    }
+    .info-card {
+      padding: 2em 0;
+      text-align: center;
+
+      @include breakpoint-up(large) {
+        min-height: 16em;
+      }
+      // @include breakpoint-up(xxlarge) {
+      //   min-height: 15em;
+      // }
+      &__head {
+        svg {
+          width: 3em;
+          fill: $secondary;
+        }
+      }
+      &__body {
+        a {
+          color: $primary;
+          font-weight: 500;
+          line-height: 2em;
+        }
+        address {
+          p {
+            font-size: 1rem;
+            max-width: 25ch;
+            margin: 0 auto;
+            color: $primary;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 1.6em;
+            @include breakpoint-up(large) {
+              max-width: 30ch;
+            }
+          }
+        }
+      }
+      @include breakpoint-up(large) {
+        flex: 1;
+      }
+    }
+  }
+}
+.contact-form {
+  height: 100vh;
+  position: relative;
+  margin-bottom: 3em;
+
+  @include breakpoint-up(large) {
+    height: 100vh;
+  }
+  @include breakpoint-up(xlarge) {
+    height: 70vh;
+    margin-bottom: 5em;
+  }
+  @include breakpoint-up(xxlarge) {
+    height: 70vh;
+    margin-bottom: 2em;
+  }
+  &__div {
+    img {
+      object-fit: cover;
+      height: 30vh;
+      width: 100%;
+      max-width: 100%;
+
+      @include breakpoint-up(large) {
+        height: 60vh;
+      }
+      @include breakpoint-up(xlarge) {
+        height: 40vh;
+      }
+    }
+  }
+  &__card {
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include breakpoint-up(large) {
+      background-image: url("../../assets/images/contact-form-bg.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom -30px right;
+      width: 60%;
+    }
+    @include breakpoint-up(xlarge) {
+      width: 50%;
+    }
+    @include breakpoint-up(xxlarge) {
+      width: 40%;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 2em;
+
+      @include breakpoint-up(large) {
+        max-width: 40ch;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea {
+        border: 1px solid rgb(190, 190, 190);
+        margin-bottom: 1em;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+      }
+      button {
+        width: fit-content;
+      }
+      ::placeholder {
+        color: black;
+        opacity: 1;
+      }
+
+      @include breakpoint-up(large) {
+        width: 50%;
+      }
+    }
+  }
+}
+.contact-map {
+
+  margin-bottom: 2em;
+
+  @include breakpoint-up(large){
+    margin-bottom: 5em;
+  }
+  iframe {
+    @include breakpoint-up(large) {
+      height: 50vh;
+    }
+  }
+}

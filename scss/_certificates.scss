@@ -1,0 +1,63 @@
+.certificates {
+  
+  &__div {
+
+    @include breakpoint-up(large){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:center;
+      align-items: center;
+      gap: 1em;
+      
+    }
+   .card{
+    margin-bottom: 2em;
+    padding: 1em;
+    overflow: hidden;
+    @include breakpoint-up(large){
+    height: 28em;
+    }
+    @include breakpoint-up(xlarge){
+    height: 29em;
+    }
+    @include breakpoint-up(xxlarge){
+    height: 32em;
+    }
+
+    img{
+     
+      @include breakpoint-up(large){
+      height: 26em;
+      object-fit: cover;
+      }
+      @include breakpoint-up(xlarge){
+      height: 27em;
+      object-fit: cover;
+      }
+      @include breakpoint-up(xxlarge){
+      height: 30em;
+    
+      }
+    }
+
+   }
+  }
+}
+
+// magnifier
+// .loupe {
+//   display: none;
+//   position: absolute;
+//   width: 200px;
+//   height: 200px;
+//   border: 1px solid black;
+//   box-shadow: 5px 5px 12px black;
+//   background: rgba(0, 0, 0, 0.25);
+//   cursor: crosshair;
+//   overflow: hidden;
+// }
+
+// .loupe img {
+//   position: absolute;
+//   right: 0;
+// }

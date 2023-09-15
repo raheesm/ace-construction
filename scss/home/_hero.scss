@@ -1,0 +1,121 @@
+.hero {
+  height: 80vh;
+  @include breakpoint-up(large){
+    margin-bottom: 0.5em;
+    height: 80vh;
+  }
+ 
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    
+    font-size: 18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.432);
+    color: #ffffff;
+   background-position: center center;
+    .content{
+      padding: 1em;
+      @include breakpoint-up(large){
+        margin-left: 5%;
+      }
+      @include breakpoint-up(xlarge){
+        margin-left: 4%;
+      }
+      @include breakpoint-up(xlarge){
+        margin-left: 6%;
+      }
+    
+      h1{
+        max-width: 30ch;
+        font-family: $pm-font;
+        @include breakpoint-up(large){
+          margin-bottom: 0.3em;
+        }
+        @include breakpoint-up(xlarge){
+          margin-bottom: 0.2em;
+          font-size: 3.875rem;
+          line-height: 1.5em;
+        }
+        @include breakpoint-up(xxlarge){
+          margin-bottom: 0.3em;
+          font-size: 4.875rem;
+        }
+      }
+      h3{ 
+        font-size: 2rem;
+        // letter-spacing: 1;
+        @include breakpoint-up(large){
+          margin-bottom: 0.2em;
+        }
+        @include breakpoint-up(xlarge){
+          font-size: 3.25rem;
+        }
+        @include breakpoint-up(xxlarge){
+          font-size: 4.25rem;
+        }
+      }
+      p{
+        font-size: 1rem;
+        font-weight: 600;
+        max-width: 70ch;
+        line-height: 2em;
+
+        @include breakpoint-up(large){
+          font-size: 1.125rem;
+          font-weight: 600;
+          max-width: 54ch;
+        }
+        
+      }
+      .btns{
+        display: flex;
+        gap: 1em;
+
+        .btn{
+          @include breakpoint-up(large){
+            padding: 1em 1.5em
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet {
+    width: 2em;
+    border-radius: 5px;
+    height: 5px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: whitesmoke;
+  }
+}

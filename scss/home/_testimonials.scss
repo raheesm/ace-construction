@@ -1,0 +1,47 @@
+.testimonials{
+  overflow: hidden;
+  iframe{
+    width: 100%;
+    @include breakpoint-up(large){
+        height: 100vh;
+  
+    }
+  }
+    &__div{
+        @include breakpoint-up(large){
+          
+            height: 50vh;
+        }
+    }
+    &__title-div{
+        background-color: $secondary;
+        
+        // color: #ffffff;
+         @include breakpoint-up(large){
+         
+            min-width: 50%;
+            display: flex;
+            
+            align-items: center;
+        }
+    }
+    &__title-box{
+        @include breakpoint-up(large){
+            width: 100%;
+           
+            
+        }
+        h2{
+            line-height: 2em;
+            @include breakpoint-up(xlarge){
+                font-size: 3rem;
+                line-height: 3rem;
+                
+            }
+        }
+    }
+ 
+    
+    
+   
+}

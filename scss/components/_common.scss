@@ -1,0 +1,48 @@
+.section-head{
+  p{
+    line-height: 2em;
+  }
+    @include breakpoint-up(large){
+  
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+      .title-div{
+        flex: 1.5;
+      }
+      
+    }
+    @include breakpoint-up(xlarge){
+      gap: 1em;
+      .title-div{
+        flex: 2;
+        h2{
+          font-size: 2.5rem;
+        }
+        h4{
+          font-size: 1.375rem;
+          font-weight: bold;
+        }
+       
+      }
+      .content-div{
+        p{
+          line-height: 2em;
+          max-width: 50em;
+        }
+      }
+      
+    }
+    @include breakpoint-up(xxlarge){
+      gap: 1em;
+      .title-div{
+        flex: 1;
+      }
+      .content-div{
+        p{
+          line-height: 2em;
+          max-width: 70em;
+        }
+      }
+    }
+  }

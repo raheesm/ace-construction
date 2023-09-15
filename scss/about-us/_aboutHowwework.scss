@@ -1,0 +1,85 @@
+.howwe-work{
+    background-color: $bg-lit;
+    &__div{
+        width: 100%;
+        .img-div{
+            position: relative;
+            margin: 0 auto;
+            width: 90%;
+            z-index: 99;
+            img{
+                width: 100%;
+                transition: $pm-transition;
+                @include breakpoint-up(large){
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @include breakpoint-up(xlarge){
+                    aspect-ratio: 6/4;
+                    object-fit: cover;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: -5%;
+                left: -5%;
+                width: 5em;
+                height: 5em;
+                background-color: $primary;
+                z-index: -1;
+                transition: 800ms all linear;
+                @include breakpoint-up(large){
+                    width: 12em;
+                    height: 12em;
+                    left: -3%;
+                    top: -3%;
+                }
+            }
+            &:hover{
+                // &:before{
+                //     transform: rotate(360deg);
+                //     background-color: $secondary;
+                // }
+                // img{
+                //     filter: blur(2px);
+                //     border-radius: 5px;
+                // }
+            }
+            &:nth-of-type(3){
+                &::before{
+                    top: unset;
+                    left: unset;
+                    bottom: -5%;
+                    right: -5%;
+                    @include breakpoint-up(large){
+                    bottom: 10%;
+                    right: -2.8%;
+                    }
+                    @include breakpoint-up(xlarge){
+                    bottom: -4%;
+                    right: -2.8%;
+                    }
+                }
+                @include breakpoint-up(large){
+                    order: 4;
+                }
+            }
+        }
+        .content-div{
+            p{
+                line-height: 2em;
+                text-align: justify;
+            }
+        }
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            row-gap: 3em;
+            column-gap: 2em;
+        }
+    }
+    @include breakpoint-up(large){
+        padding: 3em 0;
+    }
+}
