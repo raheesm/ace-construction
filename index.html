@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <title>ACE | Home Page</title>
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+  
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    /> -->
+  </head>
+  <body>
+    <!-- Header Section -->
+
+    <header class="header">
+      <div class="header__top">
+        <div class="brand-logo">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <div class="header__info">
+          <div class="info-box">
+            <div class="info-box__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="info-box__content">
+              <p>Call Us</p>
+              <a href="tel:00966582136007">00966 58213 6007</a>
+              <a href="tel:00966565278999">00966 56527 8999</a>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="info-box__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                />
+                <path
+                  d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                />
+              </svg>
+            </div>
+
+            <div class="info-box__content">
+              <p>Mail Us</p>
+              <a href="mailto:info@acesaudi.me">info@acesaudi.me</a>
+              <a href="mailto:johnjoseph@acesaudi.me">johnjoseph@acesaudi.me</a>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="info-box__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="info-box__content">
+              <p>Opening Hours</p>
+              <a href="tel:+966138051540">Sat - Thu: <br> 8am to 5 pm</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact-us.html" class="header__button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <p>Get a Quote</p>
+        </a>
+        <div class="mobile-menu">
+          <div class="mobile-menu__button" id="menuButton">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="mobile-menu__list">
+            <button id="menuCloseBtn">X</button>
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="certificates.html">Certificates & Credentials</a></li>
+              <li><a href="portfolio.html">Our Projects</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="certificates.html">Certificates & Credentials</a></li>
+          <li><a href="portfolio.html">Our Projects</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Header Section end-->
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+      <div class="swiper hero-slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/images/banner1.jpg')"
+          >
+            <div class="content">
+              <h1>Advanced Start Contracting Establishment</h1>
+              <h3>مؤسسة بدر المتقدم للمقاولات</h3>
+              <p>
+                A leading construction firm in Kingdom of Saudi Arabia, providing complete solutions in all discipline Civil, Mechanical, Electrical, Instrumentation Security Systems and Administration Services of the Petrochemical and Oil fields.
+              </p>
+              <div class="btns">
+                <a href="about-us.html" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  More About Us
+                </a>
+                <a href="services.html" class="btn btn-white">Our Services</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('assets/images/banner2.jpg');
+            "
+          >
+            <div class="content">
+              <h1>Advanced Start Contracting Establishment</h1>
+              <h3>مؤسسة بدر المتقدم للمقاولات</h3>
+              <p>
+                A leading construction firm in Kingdom of Saudi Arabia, providing complete solutions in all discipline Civil, Mechanical, Electrical, Instrumentation Security Systems and Administration Services of the Petrochemical and Oil fields.
+              </p>
+              <div class="btns">
+                <a href="about-us.html" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  More About Us
+                </a>
+                <a href="services.html" class="btn btn-white">Our Services</a>
+              </div>
+            </div>
+          </div> 
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('assets/images/banner3.jpg');
+            "
+          >
+            <div class="content">
+              <h1>Advanced Start Contracting Establishment</h1>
+              <h3>مؤسسة بدر المتقدم للمقاولات</h3>
+              <p>
+                A leading construction firm in Kingdom of Saudi Arabia, providing complete solutions in all discipline Civil, Mechanical, Electrical, Instrumentation Security Systems and Administration Services of the Petrochemical and Oil fields.
+              </p>
+              <div class="btns">
+                <a href="about-us.html" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  More About Us
+                </a>
+                <a href="services.html" class="btn btn-white">Our Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </section>
+
+    <!-- Hero Section end -->
+
+   <main>
+     <!-- Home about Section -->
+
+     <section class="home-about">
+      <div class="container container--pall">
+        <div class="home-about__div">
+          <div class="home-about__content">
+            <h4 class="pm-color">
+              Leading The Way In Building & General Contracting
+            </h4>
+            <h2 class="title">
+              Committed To Delivering High Quality Construction Projects And
+              Contracting
+            </h2>
+            <p>
+              ACE is a leading construction firm in Kingdom of Saudi Arabia,
+              providing complete solutions in all discipline Civil, Mechanical,
+              Electrical, Instrumentation Security Systems and Administration
+              Services of Petrochemical and Oil fields. Since 2012, we have been
+              providing our clients with reliable solution to their project
+              construction and plant maintenance challenges.
+            </p>
+            <div class="pm-list">
+              <ul>
+                <li>Contracting</li> 
+                <li>Maintenance</li>
+                <li>Equipment Rental</li>
+                <li>Human Resources</li>
+                <li>Industrial Trading</li>
+              </ul>
+            </div>
+            <a class="btn btn-secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              More About Us</a
+            >
+          </div>
+          <div class="home-about__feature-sec">
+            <div class="counter">
+              <div class="counter__box">
+                <h2>100+</h2>
+                <p>Projects Completed Succefully</p>
+              </div>
+              <div class="counter__box">
+                <h2>400+</h2>
+                <p>Qualified Employees Workers</p>
+              </div>
+              <div class="counter__box">
+                <h2>10+</h2>
+                <p>Years of Experience</p>
+              </div>
+            </div>
+            <div class="home-about__img">
+              <img
+                src="assets/images/pointing-sketch.jpg"
+                class="about-main-img"
+                alt="construction"
+              />
+              <div class="joinus-btn">
+                <img src="assets/images/icons/worker-cap.png" alt="worker" />
+                <h3>
+                  Join Us Be Part <br />
+                  Of Our Team
+                </h3>
+                <a href="#">
+                  <img
+                    src="assets/images/icons/circle-arrow-right.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home about Section end -->
+
+    <!-- Home services Section -->
+
+    <section class="home-service">
+      <div class="section-title">
+        <p>Leading The Way In Building & General Contracting</p>
+        <h2>Lorem Ipsum is simply dummy text of the high and industry</h2>
+      </div>
+      <div class="home-service__slider-div">
+        <div class="swiper serviceSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/man-supply.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Manpower Supply</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img
+                    src="assets/images/icons/instumentation-controll.png"
+                    alt="services"
+                  />
+                </div>
+                <div class="card__body">
+                  <h4>Instrumentation Control </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/heavy-eqp-rentel.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Heavy Equipment Rental </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/logistics.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Transport & Logistics</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div> 
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/plant-camp-maintanence.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Plant & Camp Maintenance </h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/trading-materials.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Trading & Materials</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/scafolding-solutions.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Scaffolding Solutions</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card__head">
+                  <img src="assets/images/icons/fencing-work.png" alt="services" />
+                </div>
+                <div class="card__body">
+                  <h4>Fencing Work</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy’s text of the printing and type
+                    has setting industry. Lorem Ipsum its text of the printing
+                    and
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home services Section end -->
+
+    <!-- Home Mission & Vision Section -->
+
+    <section class="mivi">
+      <div class="mivi__div">
+        <div class="mivi__img-div">
+          <img src="assets/images/mivi.jpg" alt="mission-vision" />
+          <div class="mivi__imgbox">
+            <h1>10+</h1>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+        <div class="mivi__content">
+          <div class="box">
+            <h2 class="title">Our Mission</h2>
+            <p>
+              To safely and profitably serve our client’s construction needs
+              while maintaining a reputation for quality, integrity and employee
+              satisfaction
+            </p>
+          </div>
+          <div class="box">
+            <h2 class="pm-color">Our Vision</h2>
+            <p>
+              ACE is committed to being a constructor contractor that is known
+              externally for quality, integrity and resourcefulness, and
+              internally for profitability and employee satisfaction
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Mission & Vision Section end -->
+
+    <!-- Home Featured Projects Section -->
+
+    <section class="featured-projects">
+      <div class="container container--pall">
+        <div class="section-head">
+          <div class="title-div flex-1">
+            <h4 class="pm-color">We Work With Global Industries</h4>
+            <h2 class="title">Featured Projects</h2>
+          </div>
+          <div class="content-div flex-2">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and type setting
+              up industry. Lorem Ipsum has been the industry's standard notes
+              dummy text of ever since the 1500s, when unknown
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-projects__div">
+        <div class="swiper projectSwiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url(assets/images/construction-worker-truss-installation.jpg);
+              "
+            >
+              <div class="content">
+                <h4>Lorem Ipsum</h4>
+                <p>Construction</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <div class="explore-link">
+          <a href="#"
+            >Explore All Projects &nbsp;
+            <img
+              src="assets/images/icons/circle-arrow-right.png"
+              width="25"
+              height="25"
+              alt="explore-projects"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Featured Projects Section end -->
+
+    <!-- Home Clients Section -->
+
+    <section class="home-clients">
+        <div class="home-clients__div">
+          <hr />
+          <div class="container container--px">
+          <div class="swiper clientSwiper ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/clients/ifza.png" alt="client" />
+              </div>
+              <!-- <div class="swiper-slide">
+            <img src="assets/images/clients/abu-dhabi-ministry-of-education.png" alt="client">
+          </div> -->
+              <div class="swiper-slide">
+                <img
+                  src="assets/images/clients/abudabhi-univers.png"
+                  alt="client"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/clients/khl.png" alt="client" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/images/clients/uae-exchange.png"
+                  alt="client"
+                />
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+          </div>
+          <hr />
+        </div>
+
+    </section>
+
+    <!-- Home Clients Section end -->
+
+    <!-- Home Safty Section -->
+
+    <section class="home-safty">
+      <div class="container container--px">
+        <div class="section-head">
+          <div class="title-div flex-1">
+            <h4 class="pm-color">Bigger, Better, Faster And Stronger Projects</h4>
+            <h2 class="title">Leading Way In Construction & Contracting !</h2>
+          </div>
+          <div class="content-div flex-2">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and type setting  up industry. Lorem Ipsum has been the industry's standard notes dummy text of ever since the 1500s, when unknown printer for took a galley of it.
+            </p>
+          </div>
+        </div>
+      </div>
+        <div class="home-safty__div">
+      <div class="container container--pall">
+          <h2 class="pm-color">Safty</h2>
+          <p>
+            Advanced Start Trading & Gen. Det. Est. is fully committed to
+            providing the safest workplace possible and we are a leading safety
+            performer in our industry. Success in safety starts at the top. Our
+            management team is committed to supporting our goal of Zero
+            Accidents through clear communication of our high expectations,
+            provision of the resources necessary to achieve results, and
+            follow-up to ensure compliance. <br><br> Commitment to providing the safest
+            workplace possible is a responsibility shared by each and every
+            employee of the company, with everyone expected to follow our first
+            rule of safety: "Never walk past an unsafe act or condition. Our
+            safety expectations are communicated to each employee at the
+            new-hire orientation and through our Job Hazard Analysis (JHA)
+            program, work plan pa sessions, and regular safety meetings. <br><br>
+            Appreciation for our strong safety program is shared by both our
+            empnd our customers Employees are confident that we value and
+            protect their well-being, and customers recognize that our safety
+            program protects their employees and facilities as well. We are
+            never satisfied, consequently we continually evaluate and work to
+            improve our processes to ensure success in safety, 10 Group is truly
+            committed to reaching our ultimate goal of working each and every
+            day without an accident.
+          </p>
+          </div>
+        </div>
+      
+    </section>
+
+    <!-- Home Safty Section end -->
+
+    <!-- Home Quality section -->
+
+    <section class="quality">
+      <div class="container container--pall">
+        <div class="section-head">
+          <div class="title-div flex-2">
+            <h2 class="sec-color ">Quality</h2>
+          </div>
+          <div class="content-div flex-5">
+            <p>It is our mission to be a marine, civil, and industrial engineering constructor committed to providing maximum customer satisfaction. Utilizing our unique capabilities to provide innovative quality solutions, we will be the lowest cost provider of services in all our markets. Performing large scale and complex projects requires maintaining the highest standards of quality. Our organization is built on these principles:
+          </div>
+          </p>
+        </div>
+      </div>
+
+      <div class="quality__div">
+        <div class="card">
+          <div class="card__head">
+            <img src="assets/images/icons/quality-people.png" alt="quality">
+          </div>
+          <div class="card__body">
+            <h4>Quality People</h4>
+            <p>Motivated, highly-trained experts committed to their work.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <img src="assets/images/icons/quality-process.png" alt="quality">
+          </div>
+          <div class="card__body">
+            <h4>Quality Process</h4>
+            <p>Fully managed from the initial work and safety planning, down to the finished structure</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <img src="assets/images/icons/quality-product.png" alt="quality">
+          </div>
+          <div class="card__body">
+            <h4>Quality Products</h4>
+            <p>Our work stands the test of time</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__head">
+            <img src="assets/images/icons/quality-relationship.png" alt="quality">
+          </div>
+          <div class="card__body">
+            <h4>Quality Relationships</h4>
+            <p>with our customers, our partners, and our community</p>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- Home Quality section end -->
+   </main>
+
+    <!-- footer -->
+
+   <footer class="footer">
+    <div class="footer__top container ">
+      <div class="info-box">
+        <div class="info-box__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="info-box__content">
+          <p class="fw-bold">Call Us</p>
+          <a href="tel:00966582136007">00966 58213 6007</a>
+          <a href="tel:00966565278999">00966 56527 8999</a>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="info-box__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+            />
+            <path
+              d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+            />
+          </svg>
+        </div>
+
+        <div class="info-box__content">
+          <p class="fw-bold">Mail Us</p>
+          <a href="mailto:info@acesaudi.me">info@acesaudi.me</a>
+          <a href="mailto:johnjoseph@acesaudi.me">johnjoseph@acesaudi.me</a>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="info-box__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+
+        <div class="info-box__content">
+          <p>Opening Hours</p>
+          <a class="pm-color">Sat - Thu: <br> 8am to 5 pm</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container container--pall">
+        <div class="footer__box">
+          <div class="footer__form">
+            <h3 class="sec-color">Get In Touch</h3>
+            <form>
+              <input type="text" name="name" id="name" placeholder="Name">
+              <input type="email" name="email" id="email" placeholder="Email">
+              <textarea name="details" id="details" cols="5" rows="5" placeholder="Additional Details"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          
+        </div>
+        <div class="footer__box">
+          <img src="assets/images/iso.png" class="footer__logo" alt="iso">
+        </div>
+       
+        <div class="footer__box">
+          <div class="footer__box__wrapper">
+            <div class="footer__links">
+              <h3>Links</h3>
+              <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+           <div class="footer__address">
+            <h3>Reach Us</h3>
+            <p>Dammam - Prince Mishal Street <br>
+              Building N0. 4383, Office No.6 <br>
+              Zip Code 32242 - 7302 <br>
+               Kingdom of Saudi Arabia</p>
+          </div>
+          </div>
+         </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- footer end -->
+
+
+
+    <script src="assets/js/header.js"></script>
+    <!-- <script src="assets/js/swiper.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-slider.js"></script>
+  </body>
+</html>
